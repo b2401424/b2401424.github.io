@@ -19,6 +19,7 @@ footer {
     text-align: right;
     padding-right: 10%;
     text-decoration: none;
+    margin-bottom: 1%;
 }
 .viewImage:hover {
     color: blue;
@@ -27,7 +28,6 @@ footer {
     color:black;
     display: block;
     text-align: center;
-    line-height: center;
     text-decoration: none;
 }
 .toTop:hover {
@@ -44,6 +44,7 @@ h3 {
     padding-top: 5%;
 }
 .masterclass {
+    border-radius: 3%;
     width: 25vw;
 }
 p {
