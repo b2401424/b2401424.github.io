@@ -1,0 +1,109 @@
+.navbar-expand-lg {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+.greeting {
+    background-color: lightblue;
+    padding: 2%;
+    padding-left: 4%;
+}
+footer {
+    position: sticky;
+    bottom: 0;
+    background-color: silver;
+    padding: 0.5%;
+}
+.viewImage {
+    display: block;
+    text-align: right;
+    padding-right: 10%;
+    text-decoration: none;
+}
+.viewImage:hover {
+    color: blue;
+}
+.toTop {
+    color:black;
+    display: block;
+    text-align: center;
+    line-height: center;
+    text-decoration: none;
+}
+.toTop:hover {
+    color: red;
+}
+.masterclasses {
+    background-color: lightgoldenrodyellow;
+    padding-bottom: 2%;
+}
+h2 {
+    padding: 1.5%;
+}
+h3 {
+    padding-top: 5%;
+}
+.masterclass {
+    width: 25vw;
+}
+p {
+    font-size: 80%;
+    padding-top: 1%;
+}
+.profileUser {
+    background-color:aquamarine;
+    padding: 1%;
+    padding-left: 2%;
+}
+#profileInfo {
+    background-color: rgb(180, 255, 220);
+    padding-bottom: 1%;
+}
+h5 {
+    padding-left: 1.5%;
+}
+main {
+    background-color: rgb(255, 220, 220);
+    padding-bottom: 2%;
+}
+@media screen and (max-width: 992px) {
+    .greeting {
+        padding: 6%;
+        padding-bottom: 3%;
+    }
+    footer {
+        display: inline-block;
+        height: 8vh;
+        width: 100%;
+    }
+    .viewImage {
+        padding-right: 18%;
+    }
+    .toTop {
+        font-size: 120%;
+        padding: 1%;
+    }
+    h1 {
+        font-size: 300%;
+    }
+    h2 {
+        padding: 4%;
+        font-size: 200%;
+    }
+    h3 {
+        padding-top: 15%;
+        font-size: 180%;
+    }
+    .masterclass {
+        width: 60vw;
+    }
+    details {
+        margin-bottom: 5%;
+    }
+    .profileUser {
+        padding: 3%;
+    }
+    h5 {
+        padding-left: 4%;
+    }
+}
