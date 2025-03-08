@@ -9,21 +9,24 @@
     padding-left: 4%;
 }
 footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
+    width: 100%;
     background-color: silver;
     padding: 0.5%;
 }
-.viewImage {
+.viewFullImage {
     display: block;
     text-align: right;
     padding-right: 10%;
     text-decoration: none;
     margin-bottom: 1%;
 }
-.viewImage:hover {
+.viewFullImage:hover {
     color: blue;
 }
+
+/* Footer text */
 .toTop {
     color:black;
     display: block;
@@ -33,7 +36,8 @@ footer {
 .toTop:hover {
     color: red;
 }
-.masterclasses {
+
+.MyMasterclasses {
     background-color: lightgoldenrodyellow;
     padding-bottom: 2%;
 }
@@ -43,10 +47,12 @@ h2 {
 h3 {
     padding-top: 5%;
 }
-.masterclass {
+.masterclassImage {
     border-radius: 3%;
     width: 25vw;
 }
+
+/* Text from "More info" */
 p {
     font-size: 80%;
     padding-top: 1%;
@@ -60,12 +66,37 @@ p {
     background-color: rgb(180, 255, 220);
     padding-bottom: 1%;
 }
+main {
+    padding-bottom: 2%;
+}
+body {
+    background-color: rgb(255, 220, 220);
+}
 h5 {
     padding-left: 1.5%;
 }
-main {
-    background-color: rgb(255, 220, 220);
-    padding-bottom: 2%;
+.moreDetails {
+    margin-left: 2%;
+}
+.userOpinion {
+    display: inline-block;
+}
+.btn-info, .btn-warning {
+    margin-top: 1%;
+}
+.btn-secondary, .btn-success {
+    margin-left: 1%;
+}
+.review {
+    font-size: 100%;
+}
+.masterclassDetails {
+    background-color: rgb(255, 170, 170);
+    width: 45%;
+    margin-left: 5%;
+    margin-top: 1%;
+    padding: 2%;
+    border-radius: 10%;
 }
 @media screen and (max-width: 992px) {
     .greeting {
@@ -77,12 +108,12 @@ main {
         height: 8vh;
         width: 100%;
     }
-    .viewImage {
+    .viewFullImage {
         padding-right: 18%;
     }
     .toTop {
         font-size: 120%;
-        padding: 3%;
+        padding: 1%;
     }
     h1 {
         font-size: 300%;
@@ -95,16 +126,36 @@ main {
         padding-top: 15%;
         font-size: 180%;
     }
-    .masterclass {
+    .masterclassImage {
         width: 60vw;
     }
     details {
-        margin-bottom: 5%;
+        margin-bottom: 1%;
     }
     .profileUser {
         padding: 3%;
     }
+    #profileInfo {
+        padding-bottom: 5%;
+    }
     h5 {
         padding-left: 4%;
+    }
+    .moreDetails, .btn-secondary, .btn-success{
+        margin-left: 5%;
+    }
+    .btn-info, .btn-warning {
+        margin-bottom: 3%;
+    }
+    .lastButton {
+        margin-bottom: 10%;
+    }
+    .masterclassDetails {
+        background-color: rgb(255, 170, 170);
+        width: 80%;
+        margin: 10%;
+        margin-top: 1%;
+        padding: 2%;
+        border-radius:5%;
     }
 }
