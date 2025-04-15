@@ -57,7 +57,90 @@
           </ul>
         </h5> 
       <!--Button from Bootstrap-->
-      <button type="button" class ="btn btn-success btn-sm">Change Profile Information</button>
+      <button type="button" id="changeInfo" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#changeInfoForm">Change Profile Information</button></br>
+      <a href="login.html" id="logOut" class="btn btn-danger btn-sm">Log Out</a>
+    </div>
+    <!-- Modal taken from Bootstrap -->
+    <div class="modal fade" id="changeInfoForm" tabindex="-1" aria-labelledby="profileInfoForm" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="changeProfileInfo">Change Profile Info</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Grid layout taken from Bootstrap -->
+            <div class="container" id="changeOptions">
+              <div class="row">
+                <button class="col btn btn-info" type="button" onclick="showForm('changeUsername')">Change Username</button>
+                <button class="col btn btn-info" type="button" onclick="showForm('changePassword')">Change Password</button>
+                <div class="w-100"></div>
+                <button class="col btn btn-info" type="button" onclick="showForm('changeEmail')">Change Email</button>
+                <button class="col btn btn-info" type="button" onclick="showForm('changeTel')">Change Phone Number</button>
+                <div class="w-100"></div>
+                <button class="col btn btn-info" type="button" onclick="showForm('changeInterests')">Add/Remove Interests</button>
+                <button class="col btn btn-info" type="button" onclick="showForm('changeDislikes')">Add/Remove Dislikes</button>
+              </div>
+            </div>
+            <div>
+              <form id="changeUsername" class="changeForms" action="changeUsername.php" method="POST">
+                <label for="username">New Username:</label><br>
+                <input type="text" id="newUsername" name="newUsername"><br><br>
+                <input type="submit" value="Save Changes">
+              </form>
+              <form id="changePassword" class="changeForms" action="changePassword.php" method="POST">
+                <label for="password">Old Password:</label><br>
+                <input type="password" id="oldPassword" name="oldPassword"><br><br>
+                <label for="password">New Password:</label><br>
+                <input type="password" id="newPassword" name="newPassword"><br><br>
+                <input type="submit" value="Save Changes">
+              </form>
+              <form id="changeEmail" class="changeForms" action="changeEmail.php" method="POST">
+                <label for="email">New Email:</label><br>
+                <input type="email" id="newEmail" name="newEmail"><br><br>
+                <input type="submit" value="Save Changes">
+              </form>
+              <form id="changeTel" class="changeForms" action="changeTel.php" method="POST">
+                <label for="phoneNumber">New Phone Number:</label><br>
+                <input type="tel" id="newTel" name="newTel"><br><br>
+                <input type="submit" value="Save Changes">
+              </form>
+              <form id="changeInterests" class="changeForms" action="changeInterests.php" method="POST">
+                <div class="form-group">
+                  <label for="removeInterests">Remove Interests:</label>
+                  <select class="form-control" id="interests">
+                    <option>None</option>
+                    <option>Sports</option>
+                    <option>Fishing</option>
+                    <option>Cooking</option>
+                  </select>
+                </div><br>
+                <label for="addInterests">Add new Interests:</label><br>
+                <input type="text" id="newInterests" name="newInterests"><br><br>
+                <input type="submit" value="Save Changes">
+              </form>
+              <form id="changeDislikes" class="changeForms" action="changeDislikes.php" method="POST">
+                <div class="form-group">
+                  <label for="removeDislikes">Remove Dislikes:</label>
+                  <select class="form-control" id="dislikes">
+                    <option>None</option>
+                    <option>Singing</option>
+                    <option>Dancing</option>
+                    <option>Drawing</option>
+                  </select>
+                </div><br>
+                <label for="addDislikes">Add new Dislikes:</label><br>
+                <input type="text" id="newDislikes" name="newDislikes"><br><br>
+                <input type="submit" value="Save Changes">
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="goBack" class="btn btn-secondary" onclick="hideForm()">Go Back</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
     <!--Grid layout taken from Bootstrap-->
     <h2 id="masterclassInfo">Current Masterclasses (3)</h2>
@@ -115,115 +198,37 @@
         </div>
       </div>
     </div>
-    <div class="masterclassDetails">
-      <h2>User's Masterclass Details</h2>
-      <h5>Masterclass ongoing: 3</h5>
-      <details class ="moreDetails">
-        <summary>More details</summary>
-        <ul>
-          <li>Masterclass for Basketball</li>
-            <ul>
-              <li>Started on: 11st December 2024</li>
-              <li>Progress: 12 / 23 Classes Completed</li>
-              <li>Estimated completion date: 14th May 2025</li>
-            </ul>
-          <li>Masterclass for Football</li>
-            <ul>
-              <li>Started on: 17th January 2025</li>
-              <li>Progress: 7 / 31 Classes Completed</li>
-              <li>Estimated completion date: 15th August 2025</li>
-            </ul>
-          <li>Masterclass for Thai Cooking</li>
-            <ul>
-              <li>Started on: 11st February 2025</li>
-              <li>Progress: 3 / 19 Classes Completed</li>
-              <li>Estimated completion date: 17th June 2025</li>
-            </ul>
-        </ul>
-      </details>
-      <h5>Masterclass completed: 4</h5>
-      <details class ="moreDetails">
-        <summary>More details</summary>
-        <ul>
-          <li>Masterclass for Sewing</li>
-            <ul>
-              <li>Started on: 26th May 2024</li>
-              <li>Finished on: 10th November 2024</li>
-              <li>Classes taken: 25 Classes</li>
-            </ul>
-          <li>Masterclass for Badminton</li>
-            <ul>
-              <li>Started on: 8th June 2024</li>
-              <li>Finished on: 28th December 2024</li>
-              <li>Classes taken: 30 Classes</li>
-            </ul>
-          <li>Masterclass for Hockey</li>
-            <ul>
-              <li>Started on: 1st August 2024</li>
-              <li>Finished on: 9th January 2025</li>
-              <li>Classes taken: 24 Classes</li>
-            </ul>
-          <li>Masterclass for Baseball</li>
-            <ul>
-              <li>Started on: 21st October 2024</li>
-              <li>Finished on: 17th February 2025</li>
-              <li>Classes taken: 18 Classes</li>
-            </ul>
-        </ul>
-      </details>
-      <h5>Masterclass pending: 1</h5>
-      <details class ="moreDetails">
-        <summary>More details</summary>
-        <ul>
-          <li>Masterclass for Coffee Roasting</li>
-            <ul>
-              <li>Applied on: 3rd March 2025</li>
-              <li>Status: Waiting response...</li>
-              <li>Total Classes: 25 Classes</li>
-            </ul>
-        </ul>
-      </details>
-      <h5>Masterclass dropped: 1</h5>
-      <details class ="moreDetails">
-        <summary>More details</summary>
-        <ul>
-          <li>Masterclass for Running</li>
-            <ul>
-              <li>Started on: 24th January 2024</li>
-              <li>Dropped on: 25th February 2025</li>
-              <li>Classes taken: 5 Classes</li>
-              <li>Reason for dropping: Conflicting schedule with another Masterclass</li>
-            </ul>
-        </ul>
-      </details>
-      <h5>Masterclass Wishlist: 1</h5>
-      <details class ="moreDetails">
-        <summary>More details</summary>
-        <ul>
-          <li>Masterclass for Gundam</li>
-        </ul>
-      </details>
-      <!--Buttons taken from Bootstrap-->
-      <h5 class="userOpinion">Favourite Masterclass: Masterclass for Badminton</h5><button type="button" class ="btn btn-secondary btn-sm">Change</button><br>
-      <h5 class="userOpinion">Hardest Masterclass: Masterclass for Sewing</h5><button type="button" class ="btn btn-secondary btn-sm">Change</button><br>
-      <h5 class="userOpinion">Easiest Masterclass: Masterclass for Baseball</h5><button type="button" class ="btn btn-secondary btn-sm">Change</button><br>
-      <h5 class="userOpinion">Masterclass Review</h5><button type="button" class ="btn btn-secondary btn-sm">Give Review</button><br>
-      <details class="moreDetails">
-        <summary>Your Reviews</summary>
-        <p class="review">Masterclass for Basketball: 5/5<br>
-        Masterclass for Football: 5/5<br>
-        Masterclass for Thai Cooking: No review given<br>
-        Masterclass for Sewing: 4/5<br>
-        Masterclass for Badminton: 5/5<br>
-        Masterclass for Hockey: 5/5<br>
-        Masterclass for Baseball: 4/5<br>
-        Masterclass for Running: No review given</p>
-      </details>
+    <div id="userReview">
+      <h2>Your Reviews</h2>
+      <div class="container">
+        <div class="row row-cols-1">
+          <!-- Collapse component taken from Bootstrap -->
+          <button class="col-lg-10 btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#BasketballReview" aria-expanded="false" aria-controls="BasketballReview">Masterclass for Basketball</button>
+          <div class="collapse multi-collapse" id="BasketballReview">
+            <div class="card card-body">
+              No review given yet on Masterclass for Basketball.
+            </div>
+          </div>
+          <button class="col-lg-10 btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#FootballReview" aria-expanded="false" aria-controls="FootballReview">Masterclass for Football</button>
+          <div class="collapse multi-collapse" id="FootballReview">
+            <div class="card card-body">
+              No review given yet on Masterclass for Football.
+            </div>
+          </div>
+          <button class="col-lg-10 btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#ThaiCookingReview" aria-expanded="false" aria-controls="ThaiCookingReview">Masterclass for Thai Cooking</button>
+          <div class="collapse multi-collapse" id="ThaiCookingReview">
+            <div class="card card-body">
+              No review given yet on Masterclass for Thai Cooking.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
   <footer>
     <a href="#top" class="toTop">Go to Top</a>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </main>
-</html>`
+</html>
