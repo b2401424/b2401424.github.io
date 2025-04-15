@@ -14,7 +14,6 @@ footer {
     width: 100%;
     background-color: silver;
     padding: 0.5%;
-    align-content: center;
 }
 .viewFullImage {
     display: block;
@@ -76,30 +75,28 @@ body {
 h5 {
     padding-left: 1.5%;
 }
-#giveReview {
+.moreDetails {
+    margin-left: 2%;
+}
+.userOpinion {
+    display: inline-block;
+}
+.btn-info, .btn-warning {
     margin-top: 1%;
 }
-#changeInfo {
+.btn-secondary, .btn-success {
     margin-left: 1%;
 }
-#logOut {
-    margin-top : 0.5%;
-    margin-left: 1%;
+.review {
+    font-size: 100%;
 }
-#userReview {
+.masterclassDetails {
     background-color: rgb(255, 170, 170);
-    width: 40%;
+    width: 45%;
     margin-left: 5%;
     margin-top: 1%;
-    margin-bottom: 3%;
     padding: 2%;
-    border-radius: 5%;
-}
-.btn-info {
-    margin: 1%;
-}
-.changeForms, #goBack {
-    display: none;
+    border-radius: 10%;
 }
 @media screen and (max-width: 992px) {
     .greeting {
@@ -107,13 +104,16 @@ h5 {
         padding-bottom: 3%;
     }
     footer {
-        height: 7vh;
+        display: inline-block;
+        height: 8vh;
+        width: 100%;
     }
     .viewFullImage {
         padding-right: 18%;
     }
     .toTop {
         font-size: 120%;
+        padding: 1%;
     }
     h1 {
         font-size: 300%;
@@ -141,20 +141,21 @@ h5 {
     h5 {
         padding-left: 4%;
     }
-    #changeInfo {
+    .moreDetails, .btn-secondary, .btn-success{
         margin-left: 5%;
     }
-    #giveReview {
+    .btn-info, .btn-warning {
         margin-bottom: 3%;
     }
-    #logOut {
-        margin-top : 2%;
-        margin-left: 5%;
+    .lastButton {
+        margin-bottom: 10%;
     }
-    #userReview {
+    .masterclassDetails {
+        background-color: rgb(255, 170, 170);
         width: 80%;
         margin: 10%;
         margin-top: 1%;
-        text-align: center;
+        padding: 2%;
+        border-radius:5%;
     }
 }
